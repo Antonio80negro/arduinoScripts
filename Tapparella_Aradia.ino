@@ -74,7 +74,7 @@ unsigned int leggi_posizione()
           if (rfid.readCardSerial()) {
                         tapparella1 = String(rfid.serNum[0] * 100000000 + rfid.serNum[1] * 1000000 + rfid.serNum[2] * 10000 + rfid.serNum[3] * 100 + rfid.serNum[4]);
                         codice_tap1 = tapparella1.toInt();
-                          switch (codice_tap1) {     //non capisco perchè entra in tutti questi case --> RISOLTO con break
+                          switch (codice_tap1) {     
                           case tap1_99: {posizione_tap1 = 9; //Serial.print(codice_tap1);Serial.print("-99-");Serial.println(posizione_tap1); 
                                 break;}
                           case tap1_88: {posizione_tap1 = 8; //Serial.print(codice_tap1);Serial.print("-88-");Serial.println(posizione_tap1); 
